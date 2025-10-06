@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <TextView
+        android:id="@+id/recMessage"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/common_shape_rectangle_with_radius"
+        android:backgroundTint="@color/basicDarkBlue"
+        android:hapticFeedbackEnabled="true"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreviewView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/common_shape_rectangle_with_radius"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/recMessage"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </androidx.camera.view.PreviewView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/butt_speaker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginEnd="7.5dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rec_act_selector_buttons"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/rec_act_icon_speaker_white" />
+
+        <ImageButton
+            android:id="@+id/butt_mode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="2.5dp"
+            android:layout_marginEnd="2.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_act_selector_buttons"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/rec_act_icon_eyes_white" />
+
+        <ImageButton
+            android:id="@+id/butt_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="7.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_act_selector_buttons"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/rec_act_icon_chat_white" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:color="#00000000"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/recMessage"
+        app:layout_constraintDimensionRatio="h,"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/testImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="15dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <View
+            android:id="@+id/cropRect"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle" />
+
+        <com.example.morsecode.OverlayView
+            android:id="@+id/overlay"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

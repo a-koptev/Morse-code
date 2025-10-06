@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MorseCode" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimaryDark">@color/basicBlue</item>
+        <item name="android:colorBackground">@color/app_background</item>
+        <item name="android:navigationBarColor">@color/basicBlue</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources >
