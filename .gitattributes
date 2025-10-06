@@ -14,4 +14,5 @@ local.properties linguist-detectable=false
 *.iml linguist-detectable=false
 
 # Скрываем библиотеку OpenCV
-openCVLib/ linguist-vendored
+openCVLib/** linguist-vendored
+openCVLib/* linguist-vendored
